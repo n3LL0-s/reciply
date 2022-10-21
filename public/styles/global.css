@@ -1,0 +1,678 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis&family=Montserrat:ital,wght@0,400;1,200&family=Poppins:ital,wght@0,400;1,500&family=Petit+Formal+Script&family=Playfair+Display:ital@0;1&display=swap");
+:root {
+  --color-primary: rgb(255, 244, 236);
+  --color-secondary: #7fb77e;
+  --color-tertiary: #f78d54;
+  --mons: "Montserrat", sans-serif;
+  --poppins: "Poppins", sans-serif;
+  --dosis: "Dosis", sans-serif;
+  --petit: "Petit Formal Script", cursive;
+  --play: "Playfair Display", serif;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+a {
+  color: var(--color-tertiary);
+}
+
+h1 {
+  padding-left: 2rem;
+  font-family: var(--mons);
+  font-style: italic;
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+}
+
+h2 {
+  font-family: var(--mons);
+  color: var(--color-secondary);
+}
+
+h3 {
+  font-family: var(--poppins);
+  color: var(--color-tertiary);
+}
+
+h4 {
+  font-family: var(--petit);
+  color: var(--color-tertiary);
+}
+
+p {
+  font-family: var(--mons);
+}
+
+.header {
+  height: 2.8rem;
+}
+.header h4 {
+  color: var(--color-secondary);
+  font-size: 1.3rem;
+  padding: 0.5rem;
+}
+
+.searchContainer {
+  background: url("../ingredient.jpg") fixed;
+  height: 100%;
+  padding: 7rem;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 0;
+}
+.searchContainer .headings {
+  display: flex;
+  flex-direction: column;
+  background: none;
+  justify-content: center;
+  font-family: var(--mons);
+  text-align: center;
+  align-items: center;
+  height: 80%;
+}
+.searchContainer .headings h1 {
+  width: 85%;
+  font-size: 3.6rem;
+  background: var(--color-primary);
+  opacity: 0.9;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+.searchContainer .headings h2 {
+  margin-top: 1.5rem;
+  padding: 0.5rem;
+  font-size: 1.6rem;
+  background-color: var(--color-primary);
+  text-shadow: 0.5px 0.5px 0.5px rgb(102, 102, 102);
+  color: var(--color-secondary);
+  opacity: 0.8;
+  border-radius: 0.5rem;
+}
+.searchContainer .barContainer {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  background: none;
+  height: 2.5rem;
+  align-items: center;
+}
+.searchContainer .barContainer .searchBar {
+  display: flex;
+  background-color: var(--color-primary);
+  justify-content: left;
+  align-items: center;
+  border-radius: 10px;
+  padding: 1rem 0;
+  width: 70%;
+  height: 100%;
+}
+.searchContainer .barContainer .searchBar i {
+  color: var(--color-tertiary);
+  padding: 0 0.6rem;
+}
+.searchContainer .barContainer .searchBar input {
+  outline: none;
+  width: 100%;
+  background-color: inherit;
+  color: #333;
+  border: none;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 1%;
+  font-size: 0.95rem;
+}
+.searchContainer .barContainer button {
+  background-color: var(--color-tertiary);
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  margin-left: 1.5rem;
+  border-radius: 10px;
+  justify-content: center;
+  padding: 0.4rem;
+  cursor: pointer;
+}
+.searchContainer .barContainer button:active {
+  background-color: var(--color-secondary);
+}
+
+.recipeContainer {
+  padding: 0.5rem;
+  border-radius: 15px;
+  display: flex;
+  background-color: var();
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  height: 100 .recipeContainer;
+}
+.recipeContainer h2 {
+  padding: 1rem;
+}
+.recipeContainer h3 {
+  color: var(--color-secondary);
+}
+.recipeContainer .recipe {
+  margin: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+}
+.recipeContainer .recipe p {
+  color: #333;
+  padding: 5rem;
+  text-transform: capitalize;
+}
+.recipeContainer .recipe .recipeItem {
+  padding: 2rem 0.8rem;
+  width: 85%;
+  height: 30rem;
+  border: none;
+  border-bottom: 1px solid var(--color-secondary);
+}
+.recipeContainer .recipe .recipeItem h2 {
+  font-family: var(--petit);
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  padding: 0.5rem;
+}
+.recipeContainer .recipe .recipeItem h2 a {
+  text-decoration: none;
+}
+.recipeContainer .recipe .recipeItem h2 a:hover {
+  border: 1px solid var(--color-secondary);
+  border-radius: 0.5rem;
+  padding: 0.6rem;
+}
+.recipeContainer .recipe .recipeInfo {
+  justify-content: space-between;
+  align-items: center;
+  height: 85%;
+  width: 100%;
+  display: flex;
+  padding-bottom: 1rem;
+  align-items: center;
+  text-align: left;
+}
+.recipeContainer .recipe .recipeInfo .recipeImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  border-radius: 50%;
+  height: 100%;
+}
+.recipeContainer .recipe .recipeInfo .recipeImg img {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.recipeContainer .recipe .recipeInfo .recipeInfoPart {
+  display: flex;
+  width: 30%;
+  height: 100%;
+  justify-content: space-between;
+  color: var(--color-secondary);
+  font-family: var(--poppins);
+}
+.recipeContainer .recipe .recipeInfo .recipeInfoPart li {
+  text-transform: capitalize;
+  margin-top: 3.1rem;
+  list-style: none;
+  line-height: 1.5;
+}
+.recipeContainer .recipe .recipeInfo .recipeInfoPart ul.infoBits {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.recipeContainer .recipe .recipeInfo .recipeInfoPart ul.infoContent {
+  flex-direction: column;
+  justify-content: left;
+  display: flex;
+}
+.recipeContainer .recipe .recipeInfo .recipeInfoPart ul.infoContent li {
+  color: var(--color-tertiary);
+}
+.recipeContainer .recipe .recipeInfo .recipeInfoPart h2 {
+  font-family: var(--petit);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--color-secondary);
+  font-family: var(--petit);
+  height: 100%;
+  font-size: 0.85rem;
+  font-style: bold;
+}
+.footer h4 {
+  margin: 0.5rem;
+  background: none;
+  color: var(--color-primary);
+}
+.footer p {
+  margin: 0.5rem;
+  font-size: 0.8em;
+  color: #333;
+  background: none;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../cracked.jpg");
+  background-color: var(--color-secondary);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.error h3 {
+  font-size: 5.8rem;
+  margin-bottom: 3rem;
+  color: var(--color-primary);
+  background: none;
+  font-family: var(--petit);
+}
+.error p {
+  font-size: 3rem;
+  background: none;
+  color: var(--color-primary);
+  font-family: var(--petit);
+}
+
+@media screen and (min-width: 761px) and (max-width: 950px) {
+  .header {
+    height: 2.3rem;
+  }
+  .header h4 {
+    color: var(--color-secondary);
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+  .searchContainer {
+    background: url("../ingredient.jpg") fixed;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+  }
+  .searchContainer .headings h1 {
+    width: 80%;
+    font-size: 2.5rem;
+  }
+  .searchContainer .headings h2 {
+    font-size: 1rem;
+  }
+  .searchContainer .barContainer .searchBar {
+    width: 80%;
+    height: 80%;
+  }
+  .searchContainer .barContainer .searchBar i {
+    font-size: 0.65rem;
+  }
+  .searchContainer .barContainer .searchBar input {
+    font-size: 0.7rem;
+  }
+  .searchContainer .barContainer button {
+    margin-left: 1rem;
+    height: 70%;
+    width: auto;
+    font-size: 0.6rem;
+  }
+  .recipeContainer h2 {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+  .recipeContainer h3 {
+    font-size: 1rem;
+  }
+  .recipeContainer .recipe .recipeItem {
+    padding: 2rem 0.8rem;
+    width: 75%;
+    height: 20rem;
+    border: none;
+    border-bottom: 1px solid var(--color-secondary);
+  }
+  .recipeContainer .recipe .recipeItem h2 {
+    font-family: var(--petit);
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+    padding: 0.5rem;
+  }
+  .recipeContainer .recipe .recipeItem h2 a {
+    text-decoration: none;
+  }
+  .recipeContainer .recipe .recipeItem h2 a:hover {
+    border: 1px solid var(--color-secondary);
+    border-radius: 0.5rem;
+    padding: 0.6rem;
+  }
+  .recipeContainer .recipe .recipeInfo {
+    justify-content: space-between;
+    align-items: center;
+    height: 85%;
+    width: 100%;
+    display: flex;
+    padding-bottom: 1rem;
+    align-items: center;
+    text-align: left;
+  }
+  .recipeContainer .recipe .recipeInfo .recipeImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    border-radius: 50%;
+    height: 100%;
+  }
+  .recipeContainer .recipe .recipeInfo .recipeImg img {
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 50%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    font-size: 1rem;
+  }
+  .recipeContainer .recipe .recipeInfo .recipeInfoPart {
+    font-size: 0.75rem;
+  }
+  .recipeContainer .recipe .recipeInfo .recipeInfoPart li {
+    margin-top: 2.1rem;
+  }
+  .recipeContainer .recipe .recipeInfo .recipeInfoPart h2 {
+    font-family: var(--petit);
+  }
+  .footer {
+    height: 2.5rem;
+    font-size: 0.7rem;
+  }
+  .footer h4 {
+    background: none;
+    color: var(--color-primary);
+  }
+  .error h3 {
+    font-size: 4.2rem;
+  }
+  .error p {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 440px) and (max-width: 760px) {
+  .header {
+    height: 1.8rem;
+  }
+  .header h4 {
+    color: var(--color-secondary);
+    font-size: 0.65rem;
+    padding: 0.5rem;
+  }
+  .searchContainer {
+    background: url("../ingredient.jpg") fixed;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+  }
+  .searchContainer .headings h1 {
+    width: 95%;
+    font-size: 1.8rem;
+  }
+  .searchContainer .headings h2 {
+    font-size: 0.75rem;
+  }
+  .searchContainer .barContainer {
+    width: 80%;
+  }
+  .searchContainer .barContainer .searchBar {
+    width: 80%;
+    padding: none;
+    height: 80%;
+  }
+  .searchContainer .barContainer .searchBar i {
+    font-size: 0.65rem;
+    padding: 0 0.4rem;
+  }
+  .searchContainer .barContainer .searchBar input {
+    font-size: 0.55rem;
+  }
+  .searchContainer .barContainer button {
+    margin-left: 0.6rem;
+    height: 65%;
+    width: auto;
+    font-size: 0.55rem;
+  }
+  .recipeContainer h2 {
+    padding: 1rem;
+    font-size: 0.75rem;
+  }
+  .recipeContainer h3 {
+    font-size: 0.65rem;
+  }
+  .recipeContainer .recipe .recipeItem {
+    padding: 2rem 0.8rem;
+    width: 80%;
+    height: 15rem;
+    border: none;
+    border-bottom: 1px solid var(--color-secondary);
+  }
+  .recipeContainer .recipe .recipeItem h2 {
+    font-family: var(--petit);
+    text-align: center;
+    font-size: 0.65rem;
+    margin-bottom: 0.8rem;
+    padding: 0.5rem;
+  }
+  .recipeContainer .recipe .recipeItem h2 a {
+    text-decoration: none;
+  }
+  .recipeContainer .recipe .recipeItem h2 a:hover {
+    border: 1px solid var(--color-secondary);
+    border-radius: 0.5rem;
+    padding: 0.6rem;
+  }
+  .recipeContainer .recipe .recipeInfo {
+    justify-content: space-between;
+    align-items: center;
+    height: 90%;
+    width: 100%;
+    display: flex;
+    padding-bottom: 1rem;
+    align-items: center;
+    text-align: left;
+  }
+  .recipeContainer .recipe .recipeInfo .recipeImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    border-radius: 50%;
+    height: 100%;
+  }
+  .recipeContainer .recipe .recipeInfo .recipeImg img {
+    width: 60%;
+    height: 80%;
+    margin: 0 auto;
+    border-radius: 50%;
+    font-size: 0.5rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .recipeContainer .recipe .recipeInfo .recipeInfoPart {
+    font-size: 0.4rem;
+  }
+  .recipeContainer .recipe .recipeInfo .recipeInfoPart li {
+    margin-top: 1rem;
+  }
+  .recipeContainer .recipe .recipeInfo .recipeInfoPart h2 {
+    font-family: var(--petit);
+  }
+  .footer {
+    height: 2.5rem;
+    font-size: 0.7rem;
+  }
+  .footer h4 {
+    background: none;
+    color: var(--color-primary);
+  }
+  .error h3 {
+    font-size: 3.2rem;
+  }
+  .error p {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 440px) {
+  .header {
+    height: 1.8rem;
+  }
+  .header h4 {
+    color: var(--color-secondary);
+    font-size: 0.65rem;
+    padding: 0.5rem;
+  }
+  .searchContainer {
+    background: url("../ingredient.jpg") fixed;
+    padding: 2rem;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+  }
+  .searchContainer .headings h1 {
+    width: 95%;
+    font-size: 1rem;
+  }
+  .searchContainer .headings h2 {
+    font-size: 0.55rem;
+  }
+  .searchContainer .barContainer .searchBar {
+    width: 67%;
+    padding: none;
+    height: 40%;
+  }
+  .searchContainer .barContainer .searchBar i {
+    font-size: 0.65rem;
+    padding: 0 0.25rem;
+  }
+  .searchContainer .barContainer .searchBar input {
+    font-size: 0.5rem;
+  }
+  .searchContainer .barContainer button {
+    margin-left: 0.6rem;
+    height: 65%;
+    width: auto;
+    font-size: 0.55rem;
+  }
+  .recipeContainer h2 {
+    padding: 0.55rem;
+    font-size: 0.6rem;
+  }
+  .recipeContainer h3 {
+    font-size: 0.5rem;
+  }
+  .recipeContainer .recipe .recipeItem {
+    padding: 2rem 0.8rem;
+    width: 70%;
+    height: 10rem;
+    border: none;
+    border-bottom: 1px solid var(--color-secondary);
+  }
+  .recipeContainer .recipe .recipeItem h2 {
+    font-family: var(--petit);
+    text-align: center;
+    font-size: 0.5rem;
+    margin-bottom: 0.65rem;
+    padding: 0.5rem;
+  }
+  .recipeContainer .recipe .recipeItem h2 a {
+    text-decoration: none;
+  }
+  .recipeContainer .recipe .recipeItem h2 a:hover {
+    border: 1px solid var(--color-secondary);
+    border-radius: 0.5rem;
+    padding: 0.6rem;
+  }
+  .recipeContainer .recipe .recipeInfo {
+    justify-content: space-between;
+    align-items: center;
+    height: 90%;
+    width: 100%;
+    display: flex;
+    padding-bottom: 1rem;
+    align-items: center;
+    text-align: left;
+  }
+  .recipeContainer .recipe .recipeInfo .recipeImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    border-radius: 50%;
+    height: 100%;
+  }
+  .recipeContainer .recipe .recipeInfo .recipeImg img {
+    width: 50%;
+    height: 80%;
+    margin: 0 auto;
+    border-radius: 50%;
+    font-size: 0.35rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .recipeContainer .recipe .recipeInfo .recipeInfoPart {
+    font-size: 0.35rem;
+  }
+  .recipeContainer .recipe .recipeInfo .recipeInfoPart li {
+    margin-top: 0.4rem;
+  }
+  .recipeContainer .recipe .recipeInfo .recipeInfoPart h2 {
+    font-family: var(--petit);
+  }
+  .footer {
+    height: 2.5rem;
+    font-size: 0.7rem;
+  }
+  .footer h4 {
+    background: none;
+    color: var(--color-primary);
+  }
+  .error h3 {
+    font-size: 3.2rem;
+  }
+  .error p {
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=global.css.map */
