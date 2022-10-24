@@ -23,6 +23,12 @@ export default function Search() {
     setQuery(search);
   };
 
+  const handlePress = (e) => {
+    if (e.code === "Enter") {
+      getData();
+    }
+  };
+
   const apiData = response.hits;
 
   return (
@@ -40,9 +46,15 @@ export default function Search() {
               type="text"
               placeholder="enter one or more keywords"
               onChange={getVal}
+              onKeyDown={handlePress}
             />
           </div>
-          <button type="submit" aria-label="search recipe" onClick={getData}>
+          <button
+            tabIndex={0}
+            type="submit"
+            aria-label="search recipe"
+            onClick={getData}
+          >
             search
           </button>
         </div>
@@ -52,20 +64,22 @@ export default function Search() {
           <h2>Recipes you can make with:</h2>
           <h3>{query}</h3>
           <div className="recipe">
-            {apiData.length > 0
-              ? apiData.map((item, idx) => (
-                  <RecipeItem
-                    key={idx}
-                    title={item.recipe.label}
-                    cuisine={item.recipe.cuisineType}
-                    link={item.recipe.url}
-                    yield={item.recipe.yield}
-                    time={item.recipe.totalTime}
-                    source={item.recipe.source}
-                    img={item.recipe.image}
-                  />
-                ))
-              : <p>no recipe found</p>}
+            {apiData.length > 0 ? (
+              apiData.map((item, idx) => (
+                <RecipeItem
+                  key={idx}
+                  title={item.recipe.label}
+                  cuisine={item.recipe.cuisineType}
+                  link={item.recipe.url}
+                  yield={item.recipe.yield}
+                  time={item.recipe.totalTime}
+                  source={item.recipe.source}
+                  img={item.recipe.image}
+                />
+              ))
+            ) : (
+              <p>no recipe found</p>
+            )}
           </div>
         </div>
       )}
