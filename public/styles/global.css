@@ -132,8 +132,11 @@ p {
   border: none;
   text-decoration: none;
   border-radius: 10px;
-  padding: 1%;
+  padding: 0.5rem;
   font-size: 0.95rem;
+}
+.searchContainer .barContainer .searchBar input:focus {
+  background-color: lightblue;
 }
 .searchContainer .barContainer button {
   background-color: var(--color-tertiary);
